@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.7.3/tailwind.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <nav class="bg-white border-gray-200 px-2 lg:px-4 py-2.5">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="/" class="flex items-center">
+        <span class="flex gap-2 self-center text-2xl lg:text-3xl font-semibold whitespace-nowrap "><span><img class="h-10 w-10" src="../public/img/dtu-logo.png"  alt=""></span>Alumni Affairs</span>
+      </a>
+      <div class="flex md:order-2">
+       <a href="./whydonate.html"><button type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Donate</button></a>
+        <button data-collapse-toggle="navbar-cta" type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+          aria-controls="navbar-cta" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        class="items-center absolute z-20 top-10 md:top-0  md:relative justify-between hidden w-11/12 md:flex md:w-auto md:order-1"
+        id="navbar-cta">
+        <ul
+          class="flex flex-col lg:p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 sm:text-base md:font-medium md:border-0 md:bg-white  lg:text-xl leading-8 font-semibold text-gray-500">
+
+          <li>
+            <a href="/" class="mr-4 md:hidden hover:underline md:mr-3 ">Home</a>
+          </li>
+          <li>
+            <a href="./about-us.html" class="mr-4 hover:underline md:mr-3">About</a>
+          </li>
+          <li>
+            <a href="./fame.html" class="mr-4 hover:underline md:mr-3">Hall  of Fame</a>
+          </li>
+          <li>
+            <a href="./notable-alumni.php" class="mr-4 hover:underline md:mr-3">Notable Alumni</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" onclick = "dropOpen()" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-auto mr-4 rounded md:mr-3 md:border-0 md:p-0 md:w-auto active:border-0 hover:underline">Donations <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar"  class="absolute z-10  invisible hover:visible font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:uselessclassbg-gray-700 dark:uselessclassdivide-gray-600">
+                  <ul class="py-2 text-sm dark:uselessclasstext-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="./donorsWall.php" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donor Wall</a>
+                    </li>
+                    <li>
+                      <a href="./whydonate.html" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Why Donate?</a>
+                    </li>
+                    <li>
+                      <a href="./donate.html" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donate Now</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/funds.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donations and Funds</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/meds&sch.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Medals and Scholorships</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/awards.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Apply for awards</a>
+                    </li>
+                  </ul>
+              </div>
+          </li>
+          <li>
+            <a href="./initiatives.html" class="mr-4 hover:underline md:mr-3">Alumni Initiatives</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div  class="  py-9 pb-4">
+        <h2 class="text-center text-3xl md:text-5xl font-bold py-5">Donate Through</h2>
+        <div class="container px-3 md:px-10 h-full mt-5  md:mt-8">
+          <div class="flex flex-wrap gap-5 mx-auto justify-center h-max py-5 my-5">
+            <div class="w-[400px] border min-h-[350px] rounded-md bg-slate-100 text-center py-5  ">
+
+                <span class="text-2xl font-semibold">By Bank Transfer </span>
+                <p>(IMPS/NEFT/RTGS)</p>
+                <div class="text-lg md:leading-10 my-5">
+                    <p class="font-semibold">For Medals & Scholarship</p>
+                  <p>Account Number: 36423599642</p>
+                   
+                  
+                  <p class="font-semibold">For Donation & Contributory Fund</p>
+                  <p>Account Number: 36285532193</p>
+                    
+                   <p>IFSC Code: SBlN0010446</p>
+                  <p>Branch Name: Delhi College of Engineering</p>
+
+                  <br>
+                  <p class="font-semibold">For Foreign Currency Online Transaction</p>
+                  <p>Authorised Dealer Code: 004381</p>
+                  
+                  <p>IFSC Code: SBlN0010446</p>
+                  <p>Swift Code: SBININBB776 </p>
+                  <p>Branch Name: Delhi College of Engineering</p>
+
+
+
+                  
+                </div>
+
+            </div>
+ <div class="w-[400px] border min-h-[350px] rounded-md bg-slate-100 text-center pt-5  ">
+
+                <span class="text-2xl font-semibold">By Cheque</span>
+                <div style="padding: 0px 20px;">
+                    <br>
+                  <p class="text-lg md:leading-10"  >Cheque Should be made out in favour of,<p class="font-semibold"> "DTU Medals & Scholarship" for donating towards Medals & Scholarship</p> or <p class="font-semibold">"DTU Donation & Contributory fund" for donation towards Donation & Contribution.</p></p>
+                  <br>
+                  <p class="text-lg md:leading-10">The mail regarding Cheque may be sent to 'deanalumniaffairs@dtu.ac.in' and Cheque may be sent to Dean Alumni Affairs Office, Civil Department, DTU, Bawana Road, Shabad Dairy, Rohini, New Delhi, 110042, New Delhi.</p>
+                 
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="py-3 lg:pb-4 mx-auto px-4 w-full lg:w-[600px]">
+        <h2 class="mb-5 text-4xl w-full tracking-tight font-extrabold text-center text-gray-900 ">Fill details for donation<br>(We will connect with you)</h2>
+        <form method="post" enctype="text/plain" class="space-y-3">
+           <div>
+              <label for="name1" class="block mb-2 text-sm font-medium text-gray-900 ">Your name</label>
+              <input name="name1" type="text" id="name1"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+            <div>
+              <label for="email1"  class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+              <input type="email" id="email1" name="mail1"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+             <div>
+              <label for="phone1"  class="block mb-2 text-sm font-medium text-gray-900 ">Phone Number</label>
+              <input type="number" id="phone1" name="phone1"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+            <div>
+              <label for="donate1"  class="block mb-2 text-sm font-medium text-gray-900 ">Donation Amount</label>
+              <input type="number" id="donate1" name="donate1"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+            
+            <div>
+              <label for="donateS1" class="block mb-2 text-sm font-medium text-gray-900 ">Donating For</label>
+              <input type="text" id="subject1" name="subject1"
+                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
+                required>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message1" class="block mb-2 text-sm font-medium text-gray-900 ">Message</label>
+              <textarea id="message1" rows="3" type="text" name="message1"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+                ></textarea>
+            </div>
+          
+          <button type="submit" id="but1"
+              class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gray-700 sm:w-fit  focus:ring-4 focus:outline-none focus:ring-primary-300 " onclick="sendMail1()">Mail Us</button>
+            <span class="text-gray-800 ml-4"> We'll be in touch with you shortly.</span>
+        </form>
+      </div>
+
+   
+
+   <footer class="p-4 bg-gray-200  rounded-lg shadow  md:py-6 md:pb-20 border" id="contact">
+
+    <div class="flex flex-col-reverse md:flex-row sm:items-center sm:justify-between lg:mx-20">
+      <div>
+        <ul
+          class="flex justify-center text-center md:text-left  flex-wrap md:grid md::grid-cols-1 items-center my-6 text-xl leading-8 font-semibold text-gray-500 sm:mb-0 ">
+          <li>
+            <a href="/pages/donate.html" class="mr-4 hover:underline md:mr-6 ">Donate</a>
+          </li>
+          <li>
+            <a href="/pages/notable-alumni.php" class="mr-4 hover:underline md:mr-6">Noted Alumni</a>
+          </li>
+          <li>
+            <a href="/pages/about-us.html" class="mr-4 hover:underline md:mr-6">About</a>
+          </li>
+          <li>
+            <a href="/pages/initiatives.html" class="mr-4 hover:underline md:mr-6">Initiatives</a>
+          </li>
+
+          
+          <!-- <li>
+            <a href="#Mentorship" class="mr-4 hover:underline md:mr-6 ">Mentorship</a>
+          </li> -->
+
+        </ul>
+
+      </div>
+      <div class="bg-white rounded-lg md:w-1/2 lg:w-max shadow-lg ">
+        <div class="py-3 lg:py-5 px-4 w-full lg:w-[600px]">
+          <h2 class="mb-2 text-4xl w-full tracking-tight font-extrabold text-center text-gray-900 ">Contact Us</h2>
+            
+          <form   enctype="text/plain" class="space-y-3">
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900 ">Your name</label>
+              <input name="name" type="text" id="nam"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+            <div>
+              <label for="email"  class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+              <input type="email" id="email" name="mail"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+           
+            
+            <div>
+              <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 ">Subject</label>
+              <input type="text" id="subject" name="subject"
+                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
+                required>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Your message</label>
+              <textarea id="message" rows="3" type="text" name="message"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+                ></textarea>
+            </div>
+            <button id="but2" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gray-700 sm:w-fit  focus:ring-4 focus:outline-none focus:ring-primary-300" >Mail Us</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="text-sm text-center mt-8 mb-2 text-gray-500 ">© 2023, Delhi Technological University, Shahbad Daulatpur, Main Bawana Road, DL - 42, IN</p>
+      <p class="text-sm text-center mt-8 mb-2 text-gray-500 ">Contact Number: (011)27871018| Email: deanalumni01@dtu.ac.in</p>
+    </div>
+    <script>
+    var myButton = document.getElementById('but2');
+
+// Add an event listener for the 'click' event
+myButton.addEventListener('click',sendMail);
+    function sendMail() {
+    var name = document.getElementById("nam").value;
+    var email = document.getElementById("mail").value;
+    var subject = document.getElementById("subject").value;
+    var message = document.getElementById("message").value;
+    window.location.href = 'mailto:deanalumniaffairs@dtu.ac.in';
+};
+    </script>
+
+
+  </footer>
+
+
+  <script src="../script.js"></script>
+  <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+</body>
+</html>

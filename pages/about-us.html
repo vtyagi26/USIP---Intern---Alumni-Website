@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.7.3/tailwind.min.css">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <nav class="bg-white border-gray-200 px-2 lg:px-4 py-2.5">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="/" class="flex items-center">
+        <span class="flex gap-2 self-center text-2xl lg:text-3xl font-semibold whitespace-nowrap "><span><img class="h-10 w-10" src="public/img/dtu-logo.png"  alt="DTU Logo"></span>Alumni Affairs</span>
+      </a>
+      <div class="flex md:order-2">
+       <a href="./whydonate.html"><button type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Donate</button></a>
+        <button data-collapse-toggle="navbar-cta" type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+          aria-controls="navbar-cta" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        class="items-center absolute z-20 top-10 md:top-0  md:relative justify-between hidden w-11/12 md:flex md:w-auto md:order-1"
+        id="navbar-cta">
+        <ul
+          class="flex flex-col lg:p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 sm:text-base md:font-medium md:border-0 md:bg-white  lg:text-xl leading-8 font-semibold text-gray-500">
+
+          <li>
+            <a href="/" class="mr-4 md:hidden hover:underline md:mr-3 ">Home</a>
+          </li>
+          <li>
+            <a href="./about-us.html" class="mr-4 hover:underline md:mr-3">About</a>
+          </li>
+          <li>
+            <a href="./fame.html" class="mr-4 hover:underline md:mr-3">Hall  of Fame</a>
+          </li>
+          <li>
+            <a href="./notable-alumni.php" class="mr-4 hover:underline md:mr-3">Notable Alumni</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" onclick = "dropOpen()" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-auto mr-4 rounded md:mr-3 md:border-0 md:p-0 md:w-auto active:border-0 hover:underline">Donations <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar"  class="absolute z-10  invisible hover:visible font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:uselessclassbg-gray-700 dark:uselessclassdivide-gray-600">
+                  <ul class="py-2 text-sm dark:uselessclasstext-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="./donorsWall.php" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donor Wall</a>
+                    </li>
+                    <li>
+                      <a href="./whydonate.html" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Why Donate?</a>
+                    </li>
+                    <li>
+                      <a href="./donate.html" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donate Now</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/funds.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donations and Funds</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/meds&sch.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Medals and Scholorships</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/awards.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Apply for awards</a>
+                    </li>
+                  </ul>
+              </div>
+          </li>
+          <li>
+            <a href="./initiatives.html" class="mr-4 hover:underline md:mr-3">Alumni Initiatives</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="p-12 lg:px-20">
+    <div class="flex flex-col justify-between gap-4 lg:items-center lg:flex-row">
+        <h1 class="text-4xl font-bold lg:text-5xl">About Us</h1>
+        <h3 class="text-gray-500 text-lg lg:pr-10">Welcome to the Alumni Affairs Portal of Delhi Technological University</h3>
+    </div>
+    
+    <img src="./public/img/dtu-upscaled.jpg" class="w-full lg:h-[450px] object-cover">
+    <p class="text-gray-600 p-6 bg-gray-100">Our key objective is to nurture and strengthen the Institute's bond with its alumni community, business corporations and philanthropists. These groups are the key stakeholders in DTU's journey of excellence. We encourage the involvement and participation of these entities in the Institute's strategic initiatives. These include setting up world class research and academics in emerging areas of science and technology, building world class infrastructure, improving faculty value proposition, strengthening the entrepreneurship ecosystem, and contributing to the society.</p>
+       
+    <div class="my-12 gap-4 flex flex-col items-center justify-between lg:py-10 lg:flex-row">
+        <h1 data-aos="fade-up"data-aos-anchor-placement="top-bottom"  class="text-4xl font-bold leading-none tracking-tight text-gray-900 lg:text-5xl lg:w-full">Our Vision</h1>
+        <p  data-aos="fade-up"data-aos-anchor-placement="center-bottom" class="text-center text-xl text-gray-600 lg:text-left">DTU aspires to forge a lifelong strong relationship with it's alumni and create opportunities to strengthen bonds between them and their alma mater.</p>
+    </div>
+    <hr class="pb-4">
+
+    <div class="my-12 gap-4 flex flex-col items-center justify-between lg:py-10 lg:flex-row">
+      <h1 data-aos="fade-up"data-aos-anchor-placement="top-bottom"  class="text-4xl font-bold leading-none tracking-tight text-gray-900 lg:text-5xl lg:w-full">Our Mission</h1>
+      <p  data-aos="fade-up"data-aos-anchor-placement="center-bottom" class="text-center text-xl text-gray-600 lg:text-left">One-to-one interaction with alumni and strong bonding between Alumni and DTU. Coordination between illustrious alumni and current students for job and training prospects. Creation of a comprehensive Alumni database. Sponsorship and fund raising for strategic planning and infrastructure development.</p>
+  </div>
+  <hr class="pb-4">
+
+  <div class="my-12 gap-4 flex flex-col items-center justify-between lg:py-10 lg:flex-row">
+    <h1 data-aos="fade-up"data-aos-anchor-placement="top-bottom"  class="text-4xl font-bold leading-none tracking-tight text-gray-900 lg:text-5xl lg:w-full">Quality Policy</h1>
+    <p  data-aos="fade-up"data-aos-anchor-placement="center-bottom" class="text-center text-xl text-gray-600 lg:text-left">The University is committed to achieving global standards of excellence in the field of Science, Technology, Management and allied areas by disseminating knowledge through cutting-edge research, education and innovation. We adopt best practices to maintain high standards in the core and allied functions through continuous evaluation and improvement of our processes.</p>
+</div>
+<hr class="pb-4">
+
+<div class="my-12 gap-4 flex flex-col items-center justify-between lg:py-10">
+    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="text-4xl font-bold leading-none tracking-tight text-gray-900 lg:text-5xl">Core Values</h1>
+    <div class="w-full mt-8 space-y-6">
+        <div data-aos="fade-up" class="flex flex-col md:flex-row gap-4 items-start">
+            <h3 class="text-2xl font-semibold text-blue-700 md:w-1/4">Integrity</h3>
+            <p class="text-xl text-gray-600">We do what we say through trust, transparency and honesty.</p>
+        </div>
+        <div data-aos="fade-up" class="flex flex-col md:flex-row gap-4 items-start">
+            <h3 class="text-2xl font-semibold text-purple-700 md:w-1/4">Compassion</h3>
+            <p class="text-xl text-gray-600">We foster civilized mindset for kindness, consideration and benevolence.</p>
+        </div>
+        <div data-aos="fade-up" class="flex flex-col md:flex-row gap-4 items-start">
+            <h3 class="text-2xl font-semibold text-red-700 md:w-1/4">Commitment</h3>
+            <p class="text-xl text-gray-600">We dedicate ourselves completely to all our endeavors.</p>
+        </div>
+        <div data-aos="fade-up" class="flex flex-col md:flex-row gap-4 items-start">
+            <h3 class="text-2xl font-semibold text-orange-700 md:w-1/4">Creativity</h3>
+            <p class="text-xl text-gray-600">We nurture innovation, imagination and ideation.</p>
+        </div>
+        <div data-aos="fade-up" class="flex flex-col md:flex-row gap-4 items-start">
+            <h3 class="text-2xl font-semibold text-green-700 md:w-1/4">Collaboration</h3>
+            <p class="text-xl text-gray-600">We promote team work through togetherness, harmony and acknowledgment.</p>
+        </div>
+        <div data-aos="fade-up" class="flex flex-col md:flex-row gap-4 items-start">
+            <h3 class="text-2xl font-semibold text-green-700 md:w-1/4">Inclusion</h3>
+            <p class="text-xl text-gray-600">We embrace diversity with respect, acceptance and affirmation.</p>
+        </div>
+    </div>
+</div>
+<hr class="pb-4">
+
+    <h1 class="text-4xl font-bold leading-none tracking-tight text-gray-900 my-10 text-center lg:text-start lg:text-5xl"  data-aos="fade-up"data-aos-anchor-placement="bottom-bottom" >Vice Chancellor's Message</h1>
+    <section class="flex flex-col justify-center gap-3 md:flex-row md:justify-between">
+        <div class="flex gap-10 mx-auto flex-col-reverse md:justify-end lg:flex-row lg:justify-between">
+            <div class="text-gray-500 lg:justify-end lg:flex lg:flex-col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <h3 class="text-gray-700 font-semibold"> Prof. Prateek Sharma</h3>
+                <h3>Vice Chancellor</h3>
+                <h3>Delhi Technological University</h3>
+            </div>
+            <img class="w-[200px] h-[200px] object-cover rounded-lg lg:w-[300px] lg:h-[300px]" src="./public/img/vc.jpg"  data-aos="zoom-in"data-aos-anchor-placement="center-bottom" >
+        </div>
+        
+        <blockquote class="md:w-1/2 text-md italic font-light text-gray-900" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            <svg aria-hidden="true" class="w-10 h-10 text-gray-400 dark:uselessclasstext-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
+            <p class="">"As an alumnus, researcher and leader, I am immensely proud of the vibrant alumni network
+              of DTU, which holds incredible potential to shape the university's future. Our alumni are
+              integral to building a bridge between the institution's heritage and its evolving ambitions.
+              Through strong collaboration between alumni, faculty, and students, we can foster
+              transformative mentorship, cutting-edge research partnerships, and entrepreneurial
+              innovation.<br><br>
+              Alumni engagement offers much more than individual connections; it creates a collective
+              force that can drive progress in high-impact areas such as sustainability, technology,
+              healthcare, and social innovation—which align with national priorities and global challenges.
+              Your experience and insights can inspire students and spark ideas that push boundaries,
+              creating new solutions for tomorrow's challenges.</p>
+            <a id="read-more-btn-vc" class="text-blue-800 cursor-pointer inline-flex flex-row items-center">
+                <!--  <p class="inline">Read More</p> -->
+                <span class="material-symbols-outlined">
+                  <!--  arrow_right_alt -->
+                    </span>
+            </a> 
+        </blockquote>
+    </section>
+    <hr class="my-16">
+
+    <h1 class="text-4xl font-bold leading-none tracking-tight text-gray-900 my-10 text-center lg:text-start lg:text-5xl" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">Dean's Message</h1>
+    <section class="flex flex-col justify-center gap-3 md:flex-row md:justify-between">
+        <div class="flex gap-10 mx-auto flex-col-reverse md:justify-end lg:flex-row lg:justify-between">
+            <div class="text-gray-500 lg:justify-end lg:flex lg:flex-col" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <h3 class="text-gray-700 font-semibold"> Prof. Vishal Verma</h3>
+                <h3>Dean</h3>
+                <h3>Alumni Affairs</h3>
+                <h3>Delhi Technological University</h3>
+            </div>
+            <img class="w-[200px] h-[200px] object-cover rounded-lg lg:w-[300px] lg:h-[300px]" src="./public/img/dean.jpg" data-aos="zoom-in" data-aos-anchor-placement="center-bottom">
+        </div>
+        
+        <blockquote class="md:w-1/2 text-md italic font-light text-gray-900" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+            <svg aria-hidden="true" class="w-10 h-10 text-gray-400 dark:uselessclasstext-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor"></path></svg>
+            <p class="">Dear Alumni,<br>
+              I am proud to acknowledge the vital role our alumni play in DTU's growth and
+              success. Your achievements reflect the values we foster, and we are committed to
+              deepening the bond between you and the university.<br>
+              Our mission is to build a vibrant ecosystem where alumni, students, and faculty
+              collaborate, sharing knowledge and opportunities. Through mentorship, industry
+              partnerships, and networking events, we aim to create meaningful connections that
+              drive personal and professional growth.
+
+                <br> Your involvement in new initiatives—whether entrepreneurship, research, or
+                community service—can shape DTU's future. Alumni-led efforts in start-up
+                incubators, sustainability, and innovation reflect the spirit that defines us.</p>
+            <a id="read-more-btn-dean" class="text-blue-800 cursor-pointer inline-flex flex-row items-center">
+              <!--  <p class="inline">Read More</p> -->
+                <span class="material-symbols-outlined">
+                   <!--  arrow_right_alt -->
+                    </span>
+            </a>    
+        </blockquote>
+    </section>
+
+    
+  </section>
+
+
+
+<!-- popups -->
+<section id="side-popup-dean" class="hidden">
+      <div class="fixed top-0 z-30 right-0 h-[100vh] w-[100vw] bg-black bg-opacity-50"></div>
+      <div id="Read More" class="fixed top-0 z-40 right-0 h-[100vh] w-[100vw] lg:w-[50vw] bg-gray-50 flex flex-col gap-4 p-8">
+        <span id="close-popup-dean" class="material-symbols-outlined place-self-end cursor-pointer">
+            cancel
+        </span>
+        <h3 class="text-2xl font-semibold">Dean's Message</h3>
+        <p class="text-lg text-gray-700 overflow-y-auto">Dear Alumni,
+          <br>
+          I am proud to acknowledge the vital role our alumni play in DTU's growth and
+          success. Your achievements reflect the values we foster, and we are committed to
+          deepening the bond between you and the university.<br><br>
+          Our mission is to build a vibrant ecosystem where alumni, students, and faculty
+          collaborate, sharing knowledge and opportunities. Through mentorship, industry
+          partnerships, and networking events, we aim to create meaningful connections that
+          drive personal and professional growth.<br><br>
+          Your involvement in new initiatives—whether entrepreneurship, research, or
+          community service—can shape DTU's future. Alumni-led efforts in start-up
+          incubators, sustainability, and innovation reflect the spirit that defines us.<br><br>
+
+         We welcome your support through volunteer roles, mentorship, or financial
+        contributions to scholarships, research and infrastructure development. The details
+        of possible initiatives is available on the alumni portal. Together, we can nurture
+        future leaders and keep DTU at the forefront of global developments.<br><br>
+        Your connection to DTU is lifelong. Let's continue this journey of excellence and
+        create lasting legacies that inspire generations to come.
+        <br>
+        Warm regards,
+        <br>
+        Prof Vishal Verma
+        <br>
+        Dean, Alumni Affairs
+        <br>
+        Delhi Technological University</p>
+      </div>
+</section>
+<section id="side-popup-vc" class="hidden">
+    <div class="fixed top-0 z-30 right-0 h-[100vh] w-[100vw] bg-black bg-opacity-50"></div>
+    <div id="Read More" class="fixed top-0 z-40 right-0 h-[100vh] w-[100vw] lg:w-[50vw] bg-gray-50 flex flex-col gap-4 p-8">
+      <span id="close-popup-vc" class="material-symbols-outlined place-self-end cursor-pointer">
+          cancel
+      </span>
+      <h3 class="text-2xl font-semibold">Vice Chancellor's Message</h3>
+      <p class="text-lg text-gray-700 overflow-y-auto">
+       "As an alumnus, researcher and leader, I am immensely proud of the vibrant alumni network
+       of DTU, which holds incredible potential to shape the university's future. Our alumni are
+       integral to building a bridge between the institution's heritage and its evolving ambitions.
+       Through strong collaboration between alumni, faculty, and students, we can foster
+       transformative mentorship, cutting-edge research partnerships, and entrepreneurial
+       innovation.<br><br>
+       Alumni engagement offers much more than individual connections; it creates a collective
+       force that can drive progress in high-impact areas such as sustainability, technology,
+       healthcare, and social innovation—which align with national priorities and global challenges.<br><br>
+       Your experience and insights can inspire students and spark ideas that push boundaries,
+       creating new solutions for tomorrow's challenges.<br><br>
+       Financial contributions from alumni also play a pivotal role in supporting scholarships, start-
+       up incubators, and advanced research, ensuring DTU nurtures talent, diversity, and
+       leadership. Whether through funding or expertise, your involvement will empower the next
+       generation to achieve excellence and make meaningful contributions to society.<br><br>
+       Together, let us elevate DTU's impact and create a future where our university stands not just
+       as a center of learning but as a global hub of innovation and positive change."
+      </p>
+    </div>
+</section>
+
+<script>
+     //Dean's Message
+     function showPopups (popupId){
+      document.getElementById(`${popupId}`).classList.remove("hidden");
+    }
+    function closePopups (popupId){
+      document.getElementById(`${popupId}`).classList.add("hidden");
+    }
+    document.getElementById('close-popup-dean').addEventListener('click',()=>closePopups('side-popup-dean'))
+    document.getElementById('read-more-btn-dean').addEventListener('click',()=>showPopups('side-popup-dean'))
+    
+    //Vice Chancellor's Message
+    document.getElementById('close-popup-vc').addEventListener('click',()=>closePopups('side-popup-vc'))
+    document.getElementById('read-more-btn-vc').addEventListener('click',()=>showPopups('side-popup-vc'))
+</script>
+
+ <footer class="p-4 bg-gray-200  rounded-lg shadow  md:py-6 md:pb-20 border" id="contact">
+
+    <div class="flex flex-col-reverse md:flex-row sm:items-center sm:justify-between lg:mx-20">
+      <div>
+        <ul
+          class="flex justify-center text-center md:text-left  flex-wrap md:grid md::grid-cols-1 items-center my-6 text-xl leading-8 font-semibold text-gray-500 sm:mb-0 ">
+          <li>
+            <a href="/pages/donate.html" class="mr-4 hover:underline md:mr-6 ">Donate</a>
+          </li>
+          <li>
+            <a href="/pages/notable-alumni.php" class="mr-4 hover:underline md:mr-6">Noted Alumni</a>
+          </li>
+          <li>
+            <a href="/pages/about-us.html" class="mr-4 hover:underline md:mr-6">About</a>
+          </li>
+          <li>
+            <a href="/pages/initiatives.html" class="mr-4 hover:underline md:mr-6">Initiatives</a>
+          </li>
+
+          
+          <!-- <li>
+            <a href="#Mentorship" class="mr-4 hover:underline md:mr-6 ">Mentorship</a>
+          </li> -->
+
+        </ul>
+
+      </div>
+      <div class="bg-white rounded-lg md:w-1/2 lg:w-max shadow-lg ">
+        <div class="py-3 lg:py-5 px-4 w-full lg:w-[600px]">
+          <h2 class="mb-2 text-4xl w-full tracking-tight font-extrabold text-center text-gray-900 ">Contact Us</h2>
+            
+          <form  method="post" enctype="text/plain" class="space-y-3">
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900 ">Your name</label>
+              <input name="name" type="text" id="name"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+            <div>
+              <label for="email"  class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+              <input type="email" id="email" name="mail"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+            
+            <div>
+              <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 ">Subject</label>
+              <input type="text" id="subject" name="subject"
+                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
+                required>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Your message</label>
+              <textarea id="message" rows="3" type="text" name="message"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+                ></textarea>
+            </div>
+            <button type="submit"
+              class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gray-700 sm:w-fit  focus:ring-4 focus:outline-none focus:ring-primary-300 " onclick="sendMail()">Mail Us</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="text-sm text-center mt-8 mb-2 text-gray-500 ">© 2023, Delhi Technological University, Shahbad Daulatpur, Main Bawana Road, DL - 42, IN</p>
+      <p class="text-sm text-center mt-8 mb-2 text-gray-500 ">Contact Number: (011)27871018| Email: deanalumni01@dtu.ac.in</p>
+    </div>
+    <script>
+    function sendMail() {
+    var name = $('#contact #name').val();
+    var email = $('#contact #email').val();
+    var subject = $('#contact #subject').val();
+    var message = $('#contact textarea').val();
+    window.location.href = 'mailto:deanalumniaffairs@dtu.ac.in?subject=' + subject + '&body=' + 'My name is ' + name + ' and my email is' +' (' + email + '). '  + message;
+};
+    </script>
+  </footer>
+    <script src="../script.js"></script>
+  <!-- <script src="../script.js"></script> -->
+  <!-- <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

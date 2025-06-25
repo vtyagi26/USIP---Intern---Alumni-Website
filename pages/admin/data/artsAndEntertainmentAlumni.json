@@ -1,0 +1,82 @@
+[
+    {
+        "serial": "1",
+        "name": "Jagmohan Chopra",
+        "class": 1958,
+        "branch": "Fine arts",
+        "text": "Former president and chairman of the All India Fine Arts and Crafts Society, and former principal of the Government College of Art, Chandigarh.",
+        "image": "\/pages\/public\/img\/new\/Jagmohan Chopra.jpg"
+    },
+    {
+        "serial": "2",
+        "name": "Gopi Gajwani",
+        "class": 1962,
+        "branch": "Graphic Designing",
+        "text": "Painter, designer, and cartoonist",
+        "image": "\/pages\/public\/img\/new\/Gopi Gajwani.png"
+    },
+    {
+        "serial": "3",
+        "name": "Mahirwan Mamtani",
+        "class": 1962,
+        "branch": "Fine arts",
+        "text": "Painter, graphic and multimedia artist",
+        "image": "\/pages\/public\/img\/new\/Mahirwan Mamtani.jpg"
+    },
+    {
+        "serial": "4",
+        "name": "Meera Mukherjee",
+        "class": 1950,
+        "branch": "Painting, graphics and sculpture",
+        "text": "Sculptor, received the Padma Shri in 1992.",
+        "image": "\/pages\/public\/img\/new\/Meera Mukherjee.jpg"
+    },
+    {
+        "serial": "5",
+        "name": "Sushant Singh Rajput",
+        "class": 2008,
+        "branch": "Mechanical Engineering",
+        "text": "Film actor. Best remembered for the role of MS Dhoni in the biopic M.S. Dhoni: The Untold Story, Sarfaraz in PK (film) and his debut film Kai Po Che! based on Chetan Bhagat's bestseller The 3 Mistakes of My Life.",
+        "image": "\/pages\/public\/img\/new\/Sushant Singh Rajput.jpg"
+    },
+    {
+        "serial": "6",
+        "name": "Om Prakash Sharma",
+        "class": 1958,
+        "branch": "Fine arts",
+        "text": "Painter and honorary member of the Russian Academy of Arts, Moscow. Received the National Art Award from the Lalit Kala Akademi.",
+        "image": "\/pages\/public\/img\/new\/Om Prakash Sharma.jpeg"
+    },
+    {
+        "serial": "7",
+        "name": "Arpita Singh",
+        "class": 1959,
+        "branch": "Fine arts",
+        "text": "Painter, received India's third-highest civilian award, the Padma Bhushan in 2011.",
+        "image": "\/pages\/public\/img\/new\/Arpita Singh.jpeg"
+    },
+    {
+        "serial": "8",
+        "name": "Durjoy Datta",
+        "class": 2008,
+        "branch": "Mechanical engineering",
+        "text": "Author, screenwriter, and publisher",
+        "image": "\/pages\/public\/img\/new\/Durjoy Datta.jpeg"
+    },
+    {
+        "serial": "9",
+        "name": "Sachin Garg",
+        "class": 2008,
+        "branch": "Electronics and communication engineering",
+        "text": "Author",
+        "image": "\/pages\/public\/img\/new\/Sachin Garg.jpeg"
+    },
+    {
+        "serial": "10",
+        "name": "Rajat Sood",
+        "class": 2019,
+        "branch": "Engineering Physics",
+        "text": "Standup Comedian. Winner of India's Laughter Champion (Season 1) on Sony TV",
+        "image": "\/pages\/public\/img\/new\/Rajat Sood.jpeg"
+    }
+]

@@ -1,0 +1,162 @@
+[
+    {
+        "serial": 1,
+        "name": "Rohit Chadda",
+        "class": 2005,
+        "branch": "Computer engineering",
+        "text": "Co-founder of Foodpanda India",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/rohit c.jpg"
+    },
+    {
+        "serial": 2,
+        "name": "Vijay Shekhar Sharma",
+        "class": 1998,
+        "branch": "Electronics and communication engineering",
+        "text": "Founder of Paytm",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/Vijay Shekhar Sharma.jpg"
+    },
+    {
+        "serial": 3,
+        "name": "Sanjay Gupta",
+        "class": 1981,
+        "branch": "Mechanical engineering",
+        "text": "Country Manager of Google India",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/SanjayGupta.jpg"
+    },
+    {
+        "serial": "4",
+        "name": "Manish Khera",
+        "class": 1991,
+        "branch": "Electrical engineering",
+        "text": "Former CEO of Airtel Payments Bank",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/Manish Kherra.jpg"
+    },
+    {
+        "serial": "5",
+        "name": "Suhail Sameer",
+        "class": 2006,
+        "branch": "Electrical Engineering",
+        "text": "CEO of BharatPe",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/Suhail Sameer.jpg"
+    },
+    {
+        "serial": "6",
+        "name": "Akshant Goyal",
+        "class": 2005,
+        "branch": "Computer Engineering",
+        "text": "CFO of Zomato",
+        "image": "\/pages\/public\/img\/new\/Akshant Goyal.jpeg"
+    },
+    {
+        "serial": "7",
+        "name": "Raman CV",
+        "class": 1982,
+        "branch": "Mechanical Engineering",
+        "text": "CTO of Maruti Suzuki India",
+        "image": "\/pages\/public\/img\/new\/Raman CV.jpeg"
+    },
+    {
+        "serial": "8",
+        "name": "Nipun Aggarwal",
+        "class": 1994,
+        "branch": "Electrical Engineering",
+        "text": "Chief Commercial Officer of Air India",
+        "image": "\/pages\/public\/img\/new\/Nipun Aggarwal.jpeg"
+    },
+    {
+        "serial": "9",
+        "name": "Praveen Sinha",
+        "class": 2001,
+        "branch": "Electrical Engineering",
+        "text": "Founder of Jabong.com",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/Praveen Sinha.jpg"
+    },
+    {
+        "serial": "10",
+        "name": "Piyush Shah",
+        "class": 2001,
+        "branch": "Production & Industrial Engineering",
+        "text": "Founder of Glance (company) & Co-Founder of InMobi (unicorn startups)",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/Piyush Shah.jpg"
+    },
+    {
+        "serial": "11",
+        "name": "Raghav Joshi",
+        "class": 2007,
+        "branch": "Electronics & Communication Engineering",
+        "text": "Co-Founder of Rebel Foods, previously Faasos (unicorn startup)",
+        "image": "\/pages\/public\/img\/new\/Raghav Joshi.jpeg"
+    },
+    {
+        "serial": "12",
+        "name": "Saurabh Nigam",
+        "class": 2000,
+        "branch": "Civil Engineering",
+        "text": "Founder of ElasticRun (unicorn startup)",
+        "image": "\/pages\/public\/img\/new\/Saurabh Nigam.jpg"
+    },
+    {
+        "serial": "13",
+        "name": "Uday Reddy",
+        "class": 1993,
+        "branch": "Electronics & Communication Engineering",
+        "text": "Founder of YuppTV, World's #1 Internet Pay TV provider & one of the leading OTT player for South Asian content abroad",
+        "image": "\/pages\/public\/img\/new\/Uday Reddy.jpg"
+    },
+    {
+        "serial": "14",
+        "name": "Raj Soin",
+        "class": 1969,
+        "branch": "Mechanical Engineering",
+        "text": "Founder of Soin International LLC, USA",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/raj soin.jpg"
+    },
+    {
+        "serial": "15",
+        "name": "Rashmi Daga",
+        "class": 2001,
+        "branch": "Electrical Engineering",
+        "text": "Founder of FreshMenu, Top 10 Women Entrepreneurs In India (2021)",
+        "image": "\/pages\/public\/img\/new\/Rashmi Daga.jpg"
+    },
+    {
+        "serial": "16",
+        "name": "Promod Haque",
+        "class": 1969,
+        "branch": "Electrical Engineering",
+        "text": "World's No.1 Venture Capitalist in 2004, Appeared on Annual Forbes Midas List for 13 years",
+        "image": "\/pages\/public\/img\/alumni and donor photos\/Promod Haque.jpg"
+    },
+    {
+        "serial": "17",
+        "name": "Sanjay Brahmawar",
+        "class": 1992,
+        "branch": "Civil Engineering",
+        "text": "CEO of Software AG & Top 100 Innovation CEOs Award - 2021",
+        "image": "\/pages\/public\/img\/new\/Sanjay Brahmawar.jpg"
+    },
+    {
+        "serial": "18",
+        "name": "Divya Garg",
+        "class": 2005,
+        "branch": "Computer Engineering",
+        "text": "Head of HR Uber India and South Asia region",
+        "image": "\/pages\/public\/img\/new\/Divya Garg.jpg"
+    },
+    {
+        "serial": "19",
+        "name": "Sudhir Malhotra",
+        "class": 1990,
+        "branch": "Mechanical Engineering",
+        "text": "Vice President of Renault India",
+        "image": "\/pages\/public\/img\/new\/Sudhir Malhotra.jpg"
+    },
+    {
+        "serial": "20",
+        "name": "Gaurav Kumar Gupta",
+        "class": 2005,
+        "branch": "Production & Industrial engineering",
+        "text": "VP & Country Manager of SAP Concur India",
+        "image": "\/pages\/public\/img\/new\/Gaurav Kumar Gupta.jpg"
+    }
+]

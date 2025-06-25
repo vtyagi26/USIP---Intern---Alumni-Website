@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.7.3/tailwind.min.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /></head>
+
+<body>
+
+  <nav class="bg-white border-gray-200 px-2 lg:px-4 py-2.5">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+      <a href="/" class="flex items-center">
+        <span class="flex gap-2 self-center text-2xl lg:text-3xl font-semibold whitespace-nowrap "><span><img class="h-10 w-10" src="public/img/dtu-logo.png" alt="DTU Logo"></span>Alumni Affairs</span>
+      </a>
+      <div class="flex md:order-2">
+       <a href="./whydonate.html"><button type="button"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Donate</button></a>
+        <button data-collapse-toggle="navbar-cta" type="button"
+          class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+          aria-controls="navbar-cta" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <div
+        class="items-center absolute z-20 top-10 md:top-0  md:relative justify-between hidden w-11/12 md:flex md:w-auto md:order-1"
+        id="navbar-cta">
+        <ul
+          class="flex flex-col lg:p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 sm:text-base md:font-medium md:border-0 md:bg-white  lg:text-xl leading-8 font-semibold text-gray-500">
+
+          <li>
+            <a href="/" class="mr-4 md:hidden hover:underline md:mr-3 ">Home</a>
+          </li>
+          <li>
+            <a href="./about-us.html" class="mr-4 hover:underline md:mr-3">About</a>
+          </li>
+          <li>
+            <a href="./fame.html" class="mr-4 hover:underline md:mr-3">Hall  of Fame</a>
+          </li>
+          <li>
+            <a href="./notable-alumni.php" class="mr-4 hover:underline md:mr-3">Notable Alumni</a>
+          </li>
+          <li>
+              <button id="dropdownNavbarLink" onclick = "dropOpen()" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-auto mr-4 rounded md:mr-3 md:border-0 md:p-0 md:w-auto active:border-0 hover:underline">Donations <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+              <!-- Dropdown menu -->
+              <div id="dropdownNavbar"  class="absolute z-10  invisible hover:visible font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:uselessclassbg-gray-700 dark:uselessclassdivide-gray-600">
+                  <ul class="py-2 text-sm dark:uselessclasstext-gray-400" aria-labelledby="dropdownLargeButton">
+                    <li>
+                      <a href="./donorsWall.php" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donor Wall</a>
+                    </li>
+                    <li>
+                      <a href="./whydonate.html" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Why Donate?</a>
+                    </li>
+                    <li>
+                      <a href="./donate.html" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donate Now</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/funds.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donations and Funds</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/meds&sch.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Medals and Scholorships</a>
+                    </li>
+                    <li>
+                      <a href="../public/pdf/awards.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Apply for awards</a>
+                    </li>
+                  </ul>
+              </div>
+          </li>
+          <li>
+            <a href="./initiatives.html" class="mr-4 hover:underline md:mr-3">Alumni Initiatives</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="w-10/12 mx-auto mt-4 justify-center flex flex-col items-center divide-y divide-red-900 gap-2">
+    <h1 class="my-2 pb-2 text-4xl font-bold ">Alumni Initiatives</h1>
+    <section class="flex w-full pt-6 pb-4 gap-2">
+        <div class="w-1/5  mt-2">
+            <img src="./public/img/medal.jpg" class="rounded-lg max-h-[140px]">
+        </div>
+        <div class="flex flex-col w-4/5 gap-2">
+            <h3 class="text-2xl font-semibold text-red-900">Establising Scholarship and Medals</h3>
+            <p>Embark on the journey of excellence by supporting our Alumni Scholarship and Medals Initiative. Join us in empowering the next generation of leaders and innovators by contributing to merit-based scholarships and prestigious medals. Your generous donations will enable deserving students to pursue their academic dreams, fostering a legacy of achievement within our alma mater. Embrace the spirit of giving and make a lasting impact on the educational landscape. Together, let's build a brighter future for our University.
+             </p>
+        </div>
+    </section>
+
+    <section class="flex w-full pt-6 pb-4 gap-2">
+        <div class="w-1/5  mt-2">
+            <img src="./public/img/scholarships.jpg" class="rounded-lg max-h-[140px]">
+        </div>
+        <div class="flex flex-col w-4/5 gap-2">
+            <h3 class="text-2xl font-semibold text-red-900">Endowment fund</h3>
+            <p>For Funding Tution Fee and Student Project.
+                <br>
+                Empower the aspirations of our talented students by championing our Alumni Funding Initiative. Your support will directly contribute to easing the financial burden of tuition fees and fostering groundbreaking student projects. By investing in education and innovation, you play a pivotal role in shaping the success stories of the next generation. Join us in making a lasting impact on students' academic journeys and groundbreaking projects that propel our alma mater to new heights
+             </p>
+        </div>
+    </section>
+    
+    <section class="flex w-full pt-6 pb-4 gap-2">
+        <div class="w-1/5  mt-2">
+            <img src="./public/img/iif.png" class="rounded-lg max-h-[140px]">
+        </div>
+        <div class="flex flex-col w-4/5 gap-2">
+            <h3 class="text-2xl font-semibold text-red-900">Entrepreneurship and Startup Funding</h3>
+            <p>In order to promote entrepreneurship and start-ups, incubation centre may be established which will help in creating employment and value addition. The incubation centre will also focus on solving real life problems. 
+                The incubation centre will offer incubation infrastructure- space, computing resources, connectivity, common tools; and environment for co-working, collaboration and innovation.
+             <br><br>Currently, DTU Innovation and Incubation Foundation (DTU-IIF) takes care of all the issues related with technology incubation and startups at DTU.
+              DTU-IIF has been Established  as per Companies Act of Govt of India. So far, 26 companies have been incubated under DTU-IIF. DTU-IIF supports the initiatives through seed funding, mentoring, consultancy and networking.
+             </p>
+        </div>
+    </section>
+    <section class="flex w-full pt-6 pb-4 gap-2">
+        <div class="w-1/5  mt-2">
+            <img src="./public/img/coe.JPG" class="rounded-lg max-h-[140px]">
+        </div>
+        <div class="flex flex-col w-4/5 gap-2">
+            <h3 class="text-2xl font-semibold text-red-900">Establishment of Centre of Excellence</h3>
+            <p>Centre of Excellence at DTU will facilitate research in the following thrust areas:</p>
+            <ul class="list-disc list-inside text-gray-600">
+                <li>Biofuels and Clean Energy technologies</li>
+                <li>Artificial Intelligence</li>
+                <li>Robotics and Machine Intelligence</li>
+                <li>Intelligent Power Systems</li>
+                <li>Electric Vehicles</li>
+                <li>Nanoscale devices and Biosensors</li>
+                <li>Smart materials and conducting Polymers</li>
+                <li>Information Security and Network Management</li>
+                <li>Software Quality and Testing</li>
+                <li>VLSI and Embedded Systems</li>
+                <li>Future Automobile Systems</li>
+            </ul>
+            <p>There is opportunity for establishing the Centres of Excellence in various areas of technology. The support may be in the form of physical infrastructure, equipment's, computational resources, software tools and technologies.</p>
+        </div>
+    </section>
+   
+    <section class="flex w-full pt-6 pb-4 gap-2">
+        <div class="w-1/5  mt-2">
+            <img src="./public/img/research.JPG" class="rounded-lg max-h-[140px]">
+        </div>
+        <div class="flex flex-col w-4/5 gap-2">
+            <h3 class="text-2xl font-semibold text-red-900">Establishment of Sponsored Research Laboratory in any of the Departments</h3>
+            <p>
+                There are 15 departments offering UG and PG programs.
+                <br>All the departments offer multiple areas of research.
+                <br>Sponsored Research Laboratories may be established in any of the departments:
+            </p>
+            <ul class="list-disc list-inside text-gray-600">
+                <li>
+                Department of Applied Chemistry
+                </li><li>
+                Department of Applied Mathematics
+                </li><li>
+                Department of Applied Physics</li><li>
+                Department of Biotechnology
+                </li><li>
+                Department of Civil Engineering
+                </li><li>
+                Department of Computer Science and Engineering</li><li>
+                Department of Design</li><li>
+                Department of Electonics and Communication Engineering
+                </li><li>
+                Department of Electrical Engineering
+                </li><li>
+                Department of Environmental Engineering</li><li>
+                Department of Humanities
+                </li><li>
+                Department of Information Technology
+                </li><li>
+                Department of Mechanical Engineering</li><li>
+                Delhi School of Management</li>
+                <li>University School of Management & Entrepreneurship (East Delhi Campus)</li>
+            </ul>
+        </div>
+    </section>
+     <section class="flex w-full pt-6 pb-4 gap-2">
+        <div class="w-1/5  mt-2">
+            <img src="./public/img/training.jpg" class="rounded-lg max-h-[140px]">
+        </div>
+        <div class="flex flex-col w-4/5 gap-2">
+            <h3 class="text-2xl font-semibold text-red-900">Naming Opportunities</h3>
+            <p> Get your name on your institute Building/Center/Hall in Hostel/Stand in Stadium/Library Building/Guest.
+                    <br>
+                Elevate your legacy through our prestigious Naming Opportunity by making a transformative donation to the Delhi College of Engineering (DCE).
+                <br>
+                <a href="../public/pdf/mentorship_program.pdf" target="_blank" class="text-red-900 cursor-pointer inline-flex flex-row items-center">
+                    <p class="inline">Learn More                   <span class="material-symbols-outlined">
+                      arrow_right_alt
+                  </span></p>
+                </a>
+             </p>
+        </div>
+    </section>
+    <section class="flex w-full pt-6 pb-4 gap-2">
+        <div class="w-1/5  mt-2">
+            <img src="./public/img/mentor.jpg" class="rounded-lg max-h-[130px]">
+        </div>
+        <div class="flex flex-col w-4/5 gap-2">
+            <h3 class="text-2xl font-semibold text-red-900">Mentorship Program</h3>
+            <p>Students after coming to DTU are often overwhelmed by the countless opportunities present here and often end up confused or going with the herd. Through the mentorship program, we aspire to give the students access to our diverse global alumni network to gain new perspectives and responsibly plan their career trajectories.</p>
+            <a href="../pages/mentorship-main.html" target="_blank" class="text-red-900 cursor-pointer inline-flex flex-row items-center">
+                <p class="inline">Learn More</p>
+                <span class="material-symbols-outlined">
+                    arrow_right_alt
+                    </span>
+            </a> 
+        </div>
+    </section>
+   
+  </section>
+
+<footer class="p-4 bg-gray-200  rounded-lg shadow  md:py-6 md:pb-20 border" id="contact">
+
+    <div class="flex flex-col-reverse md:flex-row sm:items-center sm:justify-between lg:mx-20">
+      <div>
+        <ul
+          class="flex justify-center text-center md:text-left  flex-wrap md:grid md::grid-cols-1 items-center my-6 text-xl leading-8 font-semibold text-gray-500 sm:mb-0 ">
+          <li>
+            <a href="/pages/donate.html" class="mr-4 hover:underline md:mr-6 ">Donate</a>
+          </li>
+          <li>
+            <a href="/pages/notable-alumni.php" class="mr-4 hover:underline md:mr-6">Noted Alumni</a>
+          </li>
+          <li>
+            <a href="/pages/about-us.html" class="mr-4 hover:underline md:mr-6">About</a>
+          </li>
+          <li>
+            <a href="/pages/initiatives.html" class="mr-4 hover:underline md:mr-6">Initiatives</a>
+          </li>
+
+          
+          <!-- <li>
+            <a href="#Mentorship" class="mr-4 hover:underline md:mr-6 ">Mentorship</a>
+          </li> -->
+
+        </ul>
+
+      </div>
+      <div class="bg-white rounded-lg md:w-1/2 lg:w-max shadow-lg ">
+        <div class="py-3 lg:py-5 px-4 w-full lg:w-[600px]">
+          <h2 class="mb-2 text-4xl w-full tracking-tight font-extrabold text-center text-gray-900 ">Contact Us</h2>
+            
+          <form  method="post" enctype="text/plain" class="space-y-3">
+            <div>
+              <label class="block mb-2 text-sm font-medium text-gray-900 ">Your name</label>
+              <input name="name" type="text" id="name"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+            <div>
+              <label for="email"  class="block mb-2 text-sm font-medium text-gray-900 ">Your email</label>
+              <input type="email" id="email" name="mail"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+                 required>
+            </div>
+            
+            <div>
+              <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 ">Subject</label>
+              <input type="text" id="subject" name="subject"
+                class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
+                required>
+            </div>
+            <div class="sm:col-span-2">
+              <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">Your message</label>
+              <textarea id="message" rows="3" type="text" name="message"
+                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
+                ></textarea>
+            </div>
+            <button type="submit"
+              class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-gray-700 sm:w-fit  focus:ring-4 focus:outline-none focus:ring-primary-300 " onclick="sendMail()">Mail Us</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="text-sm text-center mt-8 mb-2 text-gray-500 ">© 2023, Delhi Technological University, Shahbad Daulatpur, Main Bawana Road, DL - 42, IN</p>
+      <p class="text-sm text-center mt-8 mb-2 text-gray-500 ">Contact Number: (011)27871018| Email: deanalumni01@dtu.ac.in</p>
+    </div>
+    <script>
+    function sendMail() {
+    var name = $('#contact #name').val();
+    var email = $('#contact #email').val();
+    var subject = $('#contact #subject').val();
+    var message = $('#contact textarea').val();
+    window.location.href = 'mailto:deanalumniaffairs@dtu.ac.in?subject=' + subject + '&body=' + 'My name is ' + name + ' and my email is' +' (' + email + '). '  + message;
+};
+    </script>
+  </footer>
+
+<!-- <script src="../script.js"></script> -->
+<!-- <script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+</body>
+</html>

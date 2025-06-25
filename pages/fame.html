@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumni</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.7.3/tailwind.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="fame.css" />
+  </head>
+  <body>
+    <nav class="bg-white border-gray-200 px-2 lg:px-4 py-2.5">
+      <div class="container flex flex-wrap items-center justify-between mx-auto">
+        <a href="/" class="flex items-center">
+          <span class="flex gap-2 self-center text-2xl lg:text-3xl font-semibold whitespace-nowrap "><span><img class="h-10 w-10" src="public/img/dtu-logo.png"  alt="DTU Logo"></span>Alumni Affairs</span>
+        </a>
+        <div class="flex md:order-2">
+         <a href="./whydonate.html"><button type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 ">Donate</button></a>
+          <button data-collapse-toggle="navbar-cta" type="button"
+            class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+            aria-controls="navbar-cta" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="items-center absolute z-20 top-10 md:top-0  md:relative justify-between hidden w-11/12 md:flex md:w-auto md:order-1"
+          id="navbar-cta">
+          <ul
+            class="flex flex-col lg:p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 sm:text-base md:font-medium md:border-0 md:bg-white  lg:text-xl leading-8 font-semibold text-gray-500">
+
+            <li>
+              <a href="/" class="mr-4 md:hidden hover:underline md:mr-3 ">Home</a>
+            </li>
+            <li>
+              <a href="./about-us.html" class="mr-4 hover:underline md:mr-3">About</a>
+            </li>
+            <li>
+              <a href="./fame.html" class="mr-4 hover:underline md:mr-3">Hall  of Fame</a>
+            </li>
+            <li>
+              <a href="./notable-alumni.php" class="mr-4 hover:underline md:mr-3">Notable Alumni</a>
+            </li>
+            <li>
+                <button id="dropdownNavbarLink" onclick = "dropOpen()" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-auto mr-4 rounded md:mr-3 md:border-0 md:p-0 md:w-auto active:border-0 hover:underline">Donations <svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <!-- Dropdown menu -->
+                <div id="dropdownNavbar"  class="absolute z-10  invisible hover:visible font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:uselessclassbg-gray-700 dark:uselessclassdivide-gray-600">
+                    <ul class="py-2 text-sm dark:uselessclasstext-gray-400" aria-labelledby="dropdownLargeButton">
+                      <li>
+                        <a href="./donorsWall.php" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donor Wall</a>
+                      </li>
+                      <li>
+                        <a href="./whydonate.html" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Why Donate?</a>
+                      </li>
+                      <li>
+                        <a href="./donate.html" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donate Now</a>
+                      </li>
+                      <li>
+                        <a href="../public/pdf/funds.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Donations and Funds</a>
+                      </li>
+                      <li>
+                        <a href="../public/pdf/meds&sch.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Medals and Scholorships</a>
+                      </li>
+                      <li>
+                        <a href="../public/pdf/awards.pdf" target="_blank" class="block px-4 py-2 hover:bg-gray-100 dark:uselessclasshover:bg-gray-600 dark:uselessclasshover:text-white">Apply for awards</a>
+                      </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+              <a href="./initiatives.html" class="mr-4 hover:underline md:mr-3">Alumni Initiatives</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Entrepreneurs & Philanthropist 1967 Batch</div>
+        <div class="info">
+          Founder, President and CEO of Piping Technology & Products, Inc. and
+          first president of the Indo-American Chamber of Commerce of Greater
+          Houston. Dr. Durga Das Agrawal has been part of many delegations to
+          promote trade and exchange of educational and medical resources
+          between Houston and India. A building at the University of Houston has
+          been renamed after him and his wife in recognition of their
+          contribution to aid research projects, faculty and students at the
+          college.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image.png')"
+      >
+        <div class="image-text">Dr. Durga Das Agrawal</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy.png')"
+      >
+        <div class="image-text">Sh. Raj Soin</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Chairman, CEO of Soin International LLC, 1969 Batch
+        </div>
+        <div class="info">
+          Dr. Raj Soin is the Founder, Chairman of the Board and Chief Executive
+          Officer of Soin, LLC, a holding company that covers a wide range of
+          industries including defense and engineering services. He is recipient
+          of numerous awards including Ellis Island medal of honor, Ernst &
+          Young's 1999 Master Entrepreneur. The Indu and Raj Soin Medical
+          Center, the Raj Soin College of Business at Wright State University,
+          Sukhdev Raj Soin hospital in Hodal and Satya Soin school in Basoli are
+          all examples of Soin's philanthropy in USA and India. He has also
+          contributed Rs 5 Crores for construction of Raj Soin Hall in DTU.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Father of the Pentium Chip & Venture Capitalist 1971 Batch
+        </div>
+        <div class="info">
+          Better known as "Father of the Pentium Chip', Sh. Vinod Dham has over
+          40+ years of experience in developing semiconductor products,
+          technologies and Venture Capital. He has been named as one of the top
+          25 executives in the computer industry and one of the top 100 most
+          influential Asian Americans. Recently, he has been involved in
+          mentoring start-up entrepreneurs, as an Angel Investor. He is a
+          founder of IndoUS Venture Partners (IUVP), an India focused early
+          stage venture capital fund. He has pledges to contribute Rs. 1 Crore
+          to DTU towards Vinod Dham Centre of Excellence for Semiconductors and
+          Microelectronics (VDCoE4SM). He has also been awarded Padma Bhushan by
+          Indian Government for exemplary work in the area of Semiconductors.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 2.png')"
+      >
+        <div class="image-text">Sh. Vinod Dham</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 3.png')"
+      >
+        <div class="image-text">Prof. Yogi Goswami</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          World Famous inventor, Entrepreneur, Author and Educator Entrepreneur,
+          1969 Batch
+        </div>
+        <div class="info">
+          Distinguished University professor in Chemical Engineering and
+          Director of the Clean Energy Research Center at the University of
+          South Florida. Founder of the air purifier company Molekule. He is the
+          editor-in-chief of the Solar Compass, journal of the International
+          Solar Alliance. He is the inventor of the Goswami thermodynamic cycle.
+          His inventions have been commercialized and in 2016 Dr. Goswami was
+          inducted into Florida Inventors Hall of Fame. He has established the
+          "Centre For Energy & Environment" at DTU with contribution of USD
+          1,00,000.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Global Business Executive & Author, 1982 Batch
+        </div>
+        <div class="info">
+          Shri Mahesh Joshi is a seasoned Global Business Executive with four
+          decades of extensive Global business experience in senior management
+          roles. He is currently the President and Managing Director MAN Energy
+          Solutions USA Inc (A Volkswagen Group company) and Head of America
+          region. He also attended the University of Oxford and Harvard business
+          school for post-graduation programs. He has been on the board of
+          several companies across various continents. Mahesh is the host of the
+          radio show on the business channel of VoiceAmerica.com. He is also a
+          Globally acknowledged author on "Global Business" with three of his
+          books published by Oxford University Press. He was honoured as an
+          outstanding Alumnus by Oxford in the year 2017.  He featured on the
+          cover of CEO magazine in North America in 2019. He plays in US
+          National and US Open Table Tennis tournaments.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 4.png')"
+      >
+        <div class="image-text">Sh. Mahesh Joshi</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 5.png')"
+      >
+        <div class="image-text">Dr. Promod Haque</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Innovator, COO, CEO, Venture Capitalist and "Hall of Fame" investor as
+          per Forbes list. 1969 Batch
+        </div>
+        <div class="info">
+          Having 31 years of experience as venture capitalist, Shri Pramod Haque
+          is currently serving as a Senior Managing Partner at Norwest Venture
+          Partners. He has invested in more than 70 companies that have produced
+          more than $40B in exit values. He has also had more than 20 portfolio
+          companies go public and more than 30 have been acquired.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Founder and CEO, Paytm 1998 Batch</div>
+        <div class="info">
+          Founder and chief executive officer of one of the top notch financial
+          technology companies, Paytm, Shri Vijay Shekhar Sharma is an Indian
+          billionaire businessman. He was ranked as India's youngest billionaire
+          in 2017 by Forbes with a net worth of $1.3 billion. He was in the list
+          of Time Maganize's 100 most influential people in 2017 and was awarded
+          the 'ET Entrepreneur of the Year' by the Economic Times in 2016. He is
+          considered youth icon among startup aspirants. His organization Paytm
+          has signed MoU with DTU to establish the testing and training
+          facilities for centre of excellence for electric vehicle and related
+          technologies. Other MoU with DTU has been signed to support for
+          creating a Lab on Wheel facilities for digital literacy in rural area
+          of NCT. They will also assist in onboarding Environmental Engineering
+          department of DTU as an academic partner of Clean Air Project of UNEP.
+          Also contributed Rs. 1 Crore for Wisdom on Wheels
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 6.png')"
+      >
+        <div class="image-text">Shri. Vijay Shekhar Sharma</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 7.png')"
+      >
+        <div class="image-text">Shri. Karnal Singh</div>
+      </div>
+      <div id="text">
+        <div class="heading">Former Chief of Enforcement, 1979 Batch</div>
+        <div class="info">
+          Shri Karnal Singh, a 1984 batch IPS officer, is the former director of
+          Enforcement Directorate. He has over 34 years of experience in
+          investigation of corruption, terrorism, money laundering, and
+          cyber-crime cases. He is a recipient of President's medal for
+          distinguished service and Police medal for meritorious service. He has
+          been awarded the Satyendra K.Dubey Memorial Award of 2021 by IIT
+          Kanpur for upholding human values and integrity. He has also authored
+          the book "Batla House: An encounter that shook the nation".
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Entrepreneur and Educator 1978 Batch</div>
+        <div class="info">
+          Ravinder Paul Singh is a successful entrepreneur based in Silicon
+          Valley with four successful exits as a founder/CEO with Veraz going
+          public on NASDAQ, Espresso Logic acquired by CA, CyLAN acquired by
+          Hifn and Internetware acquired by Swmantec. Currently, he is the
+          acting COO for the Modern Data Company and board member for Optiwise.
+          Al and an advisor to Everest Robotics. Helping entrepreneurs is his
+          passion and he teaches entrepreneurship classes at Northeastern
+          University and UC Berkeley, mentor at Google Launchpad and volunteer
+          at TiE helping entrepreneurs in their startup journey. He has served
+          on the board of TiE Silicon Valley. He has written a book entitled
+          "Connecting NetWare to the internet" and is working on a new book on
+          Sales and Marketing for Entrepreneurs.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 8.png')"
+      >
+        <div class="image-text">Shri Ravinder Paul Singh</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 9.png')"
+      >
+        <div class="image-text">Dr. Bhuvnesh C. Goswami</div>
+      </div>
+      <div id="text">
+        <div class="heading">1959 Batch</div>
+        <div class="info">
+          Dr. Bhuvnesh C. Goswami graduated in 1959 in Textile Engineering, from
+          Delhi Polytechnic (DCE). In 1963 he was awarded the prestigious
+          Commonwealth Scholarship to pursue doctoral studies at Manchester
+          University, England, and later became an eminent Professor of Material
+          Science and Engineering at the Clemson University, USA. He is
+          recognized as one of the leading textile research and educational
+          professionals in the USA, where he was honoured by induction in the
+          Centre of Excellence by the National Textile Center. He is a fellow of
+          the Textiles institute, fellow of the ASME. He has published large
+          number of papers and books, holds 14 patents and received many awards.
+          He has been awarded the Harold Dewitt Smith Gold Medal of the American
+          Society for testing and materials. For his outstanding contributions
+          Dr. Bhuvnesh C. Goswami has achieved international standing in the
+          textile science community for which he received the Honorary Doctorate
+          from the University de Haute-Alsace, Mulhouse, France in October,
+          2005. In 1992, Clemson University named him Distinguished Alumni
+          Professor of Textile Science.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Founder and CEO, Tillman Global Holdings, 1977 Batch Co-Founder of
+          GoMechanic (Alumnus- 2010, Civil Engineering)
+        </div>
+        <div class="info">
+          Sh. Sanjiv Ahuja is the founder, chairman and CEO of Tillman Global
+          Holdings (TGH), a digital infrastructure firm, headquartered in New
+          York. He is a member of the Council on Foreign Relations, a board
+          member of PeaceTech Lab, and a director of the Ahuja Family
+          Foundation. In addition to Vodafone Group Plc, he has served on
+          several public boards including Telenor S.A., Cadbury's,
+          Williams-Sonoma and Network Appliance. He also served as the CEO of
+          Orange S.A, and LightSquared.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 10.png')"
+      >
+        <div class="image-text">Shri. Sanjiv Ahuja</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 11.png')"
+      >
+        <div class="image-text">H.E. Shri. Dinesh Bhatia</div>
+      </div>
+      <div id="text">
+        <div class="heading">Senior IFS Officer 1989 Batch</div>
+        <div class="info">
+          His Excellency Shri Dinesh Bhatia (IFS) is the Ambassador
+          Extraordinary and Plenipotentiary to the Republic of Argentina with
+          concurrent accreditation to Uruguay since 2019. Prior to his current
+          appointment, he served as the Consul General, Toronto and Ambassador
+          to Cote d'Ivoire, Guinea and Liberia. He has served in various Indian
+          Missions abroad including Madrid, Kathmandu, and Kuwait. He was
+          seconded by the Government to the Department of Atomic Energy, Mumbai
+          and as Private Secretary to the Tourism Minister of India. He has also
+          served in various Divisions of Ministry of External Affairs, New
+          Delhi.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Vice President of Google India, 1988 Batch</div>
+        <div class="info">
+          Shri Sanjay Gupta, as country head of Google is committed to solving
+          some of the unique problems of India through innovative use of
+          technology, making internet an engine of economic growth and
+          contribute to India's digital journey. Prior to joining google. He has
+          served as the managing director of Star India and the Walt Disney
+          Company, India. He is widely credited for building their sports
+          business via the acquisition of marquee cricketing properties and
+          launch of the kabaddi and football leagues: Pro Kabaddi League and
+          Indian Super League.  
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 12.png')"
+      >
+        <div class="image-text">Shri Sanjay Gupta</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 13.png')"
+      >
+        <div class="image-text">Sh. Raj Sardana</div>
+      </div>
+      <div id="text">
+        <div class="heading">Entrepreneur, 1981 Batch</div>
+        <div class="info">
+          Raj Sardana is the Chairman, CEO, and founder of Innova Solutions. He
+          is a successful entrepreneur with more than 25 years of experience. He
+          also served as President and CEO of Applied Communications, Inc. He
+          also brings a strategic vision and extensive experience in both the US
+          and off-shore markets. He is an active member of the Wall Street
+          Journal's CEO Council, and the Forbes Business Council. In 2023, he
+          was recognized as one of Atlanta's Most Admired CEOs by the Atlanta
+          Business Chronicle and named "one of the country's most successful
+          immigrant entrepreneurs" in a profile by Forbes.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Entrepreneur 1969 Batch</div>
+        <div class="info">
+          Shri Devendra Pal Garg is well known entrepreneur of India. He
+          completed his degree in Mechanical Engineering from Delhi college of
+          Engineering in 1969. After graduation, he went onto his Master's in
+          Industrial Engineering from I.I.T.Chicago USA and part-time course in
+          Management from Jamna Lal Bajaj Institute in Mumbai. After working in
+          industry and corporate sector for some years, Garg left his cushy job
+          and took the biggest risk of his life by turning into an entrepreneur.
+          He established Garuda Cotex Shades Ltd, a state-of-art Cotton yarn
+          dyeing plant in Ankleshwar, Gujrat that he is presently heading as the
+          Chairman and Managing Director. He is also an independent director of
+          Baswara Syntex limited. He attributes his success to hard work, a
+          little-bit of luck, self motivation and being clear hearted.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 14.png')"
+      >
+        <div class="image-text">Shri Devendra Pal Garg</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 15.png')"
+      >
+        <div class="image-text">Shri Kulwant Singh Sobti</div>
+      </div>
+      <div id="text">
+        <div class="heading">Entrepreneur, 1969 Batch</div>
+        <div class="info">
+          Shri. Kulwant Singh Sobti graduated in Mechanical Engineering in 1969
+          from Delhi College of Engineering, he started his career with VOLTAS
+          Ltd. in 1970, and worked there for 6 years in Big Projects like
+          Air-conditioning of Press Trust of India Bidg in Parliament street &
+          Bharat Electronics, to name a few. In 1976, he moved to Muscat,
+          Sultanate of Oman to set up a new Air-conditioning branch of a big UAE
+          group Juma Al Majid and built it up to 400 persons in 8 years.
+          Subsequently, started another new company in 1984. He moved to Dubai
+          in 1997 seeking a larger, more dynamic market operated 2 companies
+          completing several marquee projects including 5 no 40 storyed
+          Buildings each in a record time of 2 years, Global Village Permanent
+          Pavillions. He has also built and operated Fire Protection Business.
+          He retired in 2017 after working 48 years out of which 40 years were
+          spent in Dubai & Muscat. In his entire career of 48 years he stated 4
+          new companies and impact lives of thousands of high quality people.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Entrepreneur 1988 Batch</div>
+        <div class="info">
+          Ganesh Krishnan is an angel investor, serial entrepreneur and promoter
+          from India. He is currently the director of GrowthStory, working with
+          marquee VCs and entrepreneurs. He is also the promoter director of
+          startups like BigBasket.com, Bluestone, Portea Medical, HomeLane,
+          HouseJoy, FreshMenu, HungerBox, ClearOut.io, Verloop.io, Marketics,
+          KVN Foundation, FeedMyBangalore etc. He has previously founded an
+          Edu-Tech startup called TutorVista. He is an Adjunct Professor at
+          Indian Institute of Management, Bangalore (IIMB) and served as one of
+          the Board of Governors of Indian Institute of Management, Calcutta
+          (IIMC).     
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 16.png')"
+      >
+        <div class="image-text">Shri Ganesh Krishnan</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 17.png')"
+      >
+        <div class="image-text">Padma Shri Dr Ravi B Grover</div>
+      </div>
+      <div id="text">
+        <div class="heading">1970 Batch</div>
+        <div class="info">
+          Dr Ravi Grover is well known in India as a proponent of nuclear Energy
+          who played a key role in India's nuclear program. Ravi B. Grover
+          completed his bachelor's degree in mechanical engineering from the
+          prestigious DCE in 1970 and joined the Bhabha Atomic Research Centre.
+          He completed a PhD in Mechanical Engineering from the IISC,
+          Banglore, in 1982. He is the founding Director and later on Vice-Chancellor of
+          Homi Bhabha National Institute (HBNI). He played a key role as
+          negotiator in Indo-US nuclear deal in 2007. He received Padma Shri in
+          2014 in view of his contribution to India's nuclear program. During a
+          career spanning four decades, Dr. Grover has distinguished himself as
+          an academic, research and development engineer and a science
+          administrator. His knowledge of nuclear engineering and nuclear law
+          has earned him the title 'nuclear diplomat'.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">President at US Bancorp 1992 Batch</div>
+        <div class="info">
+          Gunjan Kedia has spent nearly 30 years in financial services, serving
+          in leadership roles at PwC and McKinsey & Company, and in global
+          executive positions at BNY Mellon and State Street Financial. She has
+          been an influential leader at U.S. Gunjan Kedia has been recognized
+          repeatedly for excellence in her career. She is a six-time American
+          Banker Most Powerful Women in Finance honoree and has been named twice
+          to the Barron's 100 Most Influential Women in the U.S. Finance list.
+          She holds a master's degree in business administration with
+          distinction from Carnegie Mellon University, where she earned the
+          alumni achievement award in 2018 and the professional excellence award
+          in 2022. Gunjan was named to American Banker's Most Powerful Women in
+          Finance list six times and Barron's 100 Most Influential Women in U.S.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 18.png')"
+      >
+        <div class="image-text">Ms. Gunjan Kedia</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 19.png')"
+      >
+        <div class="image-text">Shri Arvind Saxena</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Former Chairman, Union Public Service Commission 1976 Batch
+        </div>
+        <div class="info">
+          A 1978 batch officer of Indian Postal Service and former Chairman of
+          U.P.S.C, Shri Saxena joined U.P.S.C in 2015. He has also served in the
+          Research and Analysis Wing, where he specialised in the study of
+          strategic developments in neighbouring countries including Nepal,
+          China, and Pakistan. Shri Sexana received awards for meritorious
+          services (2005) and distinguished services (2012), conferred by the
+          Hon'ble Prime Minister of India in recognition of his exemplary work
+          and unblemished service record in the R&AW.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Co-Founder Glance</div>
+        <div class="info">
+          Piyush Shah is the co-founder of Glance, a leading content platform in
+          India. Glance offers personalised content, including news,
+          entertainment, and lifestyle updates, directly on the lock screen of
+          Android smartphones, reaching millions of users across the country.
+          Piyush Shah's entrepreneurial vision with Glance highlights the
+          transformative power of leveraging technology to enhance user
+          engagement and redefine content delivery in the digital age. As Glance
+          continues to innovate and expand its offerings, Shah's leadership
+          remains instrumental in shaping the future of mobile content
+          consumption in India and beyond.  
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 20.png')"
+      >
+        <div class="image-text">Shri. Piyush Shah</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 21.png')"
+      >
+        <div class="image-text">Shri Saurabh Nigam</div>
+      </div>
+      <div id="text">
+        <div class="heading">Co-Founder ElasticRun</div>
+        <div class="info">
+          Saurabh Nigam, is a co-founder of ElasticRun Established in 2016,
+          ElasticRun aims to revolutionise the logistics sector by leveraging
+          technology to optimise supply chain operations. He recognized the
+          inefficiencies in traditional logistics models and sought to address
+          them through ElasticRun's platform. Under his leadership, ElasticRun
+          has developed a unique business model that connects businesses with a
+          network of freelancers to fulfil last-mile delivery and distribution
+          needs efficiently. ElasticRun's success can be attributed to its
+          technology-driven approach, agility, and focus on providing
+          cost-effective solutions to its clients. Nigam's visionary leadership
+          continues to drive ElasticRun's expansion, positioning it as a
+          disruptive force in India's logistics and distribution landscape.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Entrepreneur</div>
+        <div class="info">
+          Shri. Sanjay Modi, is the Senior Director in Michael & Susan Dell
+          Foundation. He is also the founder and CEO of Gloscout. He has also
+          served as executive Vice President and Managing Director (APAC &
+          Middle East) at Monster.com. In addition, he has executed leadership
+          roles at Indiaconstruction.com, NIIT, and Ingersoll Rand. He continues
+          to be an avid startup investor and advisor. His organization, MSDF has
+          started 40 scholarships at DTU.  
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 22.png')"
+      >
+        <div class="image-text">Shri. Sanjay Modi</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 23.png')"
+      >
+        <div class="image-text">Shri Varun Alagh</div>
+      </div>
+      <div id="text">
+        <div class="heading">Co-Founder & CEO Honasa Consumer Ltd</div>
+        <div class="info">
+          Varun Alagh is the Co-Founder and CEO of Honasa Consumer Private Ltd,
+          which established its first-ever baby nourishing brand, Mamaearth,
+          in November 2016. He has been listed among the top managers in HUL for
+          two years consistently. He was conferred with the "I am a Diageo
+          Award". He has also received the Business Unit President Award twice.
+          He was conferred with the Above & Beyond Award.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">Mechanical Engineering</div>
+        <div class="info">
+          Sh Suraaj Pal Bhatia is graduate of Mechanical Engineering from Delhi
+          College of Engineering. He moved to the US in 1969 for studying MS in
+          Mechanical Engineering at a private Marquette University, Milwaukee WI
+          securing teaching/ research assistantship and tution scholarship
+          before leaving from India. His research thesis was published in ASME
+          Transactions. He worked for Caterpillar Inc in Peoria IL. He had a
+          very rewarding career in various business units - Marine
+          Transmissions, Structural and Dynamic Analysis, Machine Engine
+          Components, Truck Engine Applications, Genset Applications &
+          Installations and Custom Applications of all Machine products
+          including Gensets for Locomotives. During the last job with Custom
+          Machines, a US patent was awarded to him and his team.Currently, he
+          has focused on meditation and is involved in philanthropy. He has
+          started a scholarship at DTU.  
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 24.png')"
+      >
+        <div class="image-text">Shri. Suraaj Pal Bhatia</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/new/image copy 25.png')"
+      >
+        <div class="image-text">Shri Supam Maheshwari</div>
+      </div>
+      <div id="text">
+        <div class="heading">Entrepreneur</div>
+        <div class="info">
+          Shri Supam Maheshwari is the founder and Chief Executive Officer (CEO)
+          of the baby care firm, FirstCry based in Pune, India. He is a
+          first-generation entrepreneur who has a sharp business mindset. He
+          first established a company called Brainvisa Technologies and
+          thereafter, he launched FirstCry through BrainBees. FirstCry is
+          bestowed with the Most Popular Online Site award in Child Awards held
+          in Delhi in 2013. He is also the co-founder of Xpressbees Logistics
+          Service provider and GlobalBees.     
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-Founder at InMobi (Alumnus- 2001, Production and Industrial
+          Engineering)
+        </div>
+        <div class="info">
+          Piyush is a Co-founder at InMobi, and President & COO at Glance, an
+          AI-driven lock screen platform. Glance has redefined the way users
+          discover content and commerce on the internet and is one of Asia's
+          fastest growing platforms. He is an active investor for 20+ startups,
+          focused on new-age enterprise SaaS, India-focused consumer tech,
+          EdTech, and the HealthTech space.In 2017, Piyush was recognized as one
+          of the 40 hottest young business leaders under 40 in India by The
+          Economic Times, one of the country's biggest financial dailies.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image.png')"
+      >
+        <div class="image-text">Piyush Shah</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy.png')"
+      >
+        <div class="image-text">Manish Khera</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Founder, CEO of FINO (Alumnus- 1991, electrical engineering)
+        </div>
+        <div class="info">
+          Manish Khera is the founder and Chief Executive Officer of the
+          Financial Inclusion Network and Operations (FINO) Pay-tech. The World
+          Economic Forum honoured FINO with a Technology Pioneer Award in 2011.
+          Manish Khera has received praise for his role as one of the thought
+          leaders in the financial inclusion and micro-finance space in India.He
+          has been honoured and recognized as "Young Global Leader of 2011" by
+          World Economic Forum.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-Founder of Sequoia Capital, Rebel Foods (Alumnus- 2007, electronics
+          and telecommunication)
+        </div>
+        <div class="info">
+          Raghav Joshi is the co-founder of the world's largest internet
+          restaurant company by scale, Sequoia Capital, Goldman Sachs and
+          Coatue-invested Rebel Foods. After completing his bachelor's from
+          Delhi, and MBA from IIM, Indore, Raghav moved on to roles with global
+          behemoths in the investment and strategic consulting space, such as JP
+          Morgan and Deloitte. Raghav has been associated with Rebel Foods for a
+          decade and the Rebel Launcher program where the company onboards
+          brands and scale them on the Rebel ecosystem
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 2.png')"
+      >
+        <div class="image-text">Raghav Joshi</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 3.png')"
+      >
+        <div class="image-text">Swati Gupta</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-Founder of IndustryBuying (Alumnus- Computer science engineering)
+        </div>
+        <div class="info">
+          Swati Gupta, a computer science graduate from Delhi College of
+          Engineering and an MBA holder from Carnegie Mellon University, is the
+          co-founder of Industrybuying. The company claims to be one of the
+          leading players in the B2B e-commerce platform selling industrial
+          products. She has an experience of over 12 years in Management
+          Consulting, Supply Chain Management and Private Equity Operational
+          Advisory Business.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          CEO and Co-Founder of Shamoor (Alumnus- 2015, Civil engineering)
+        </div>
+        <div class="info">
+          Akash Jai Singh is the CEO and Co-Founder of Shamoor, a media agency
+          recognized among 39 startups highlighted by Delhi Technological
+          University (DTU) for their innovative contributions. As a digital
+          marketer, brand strategist, and e-commerce performance expert, he has
+          been featured by BBC World and is known for his expertise in viral
+          marketing. Under his leadership, Shamoor has achieved significant
+          milestones in the media and marketing industry.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 4.png')"
+      >
+        <div class="image-text">Akash Jai Singh</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 5.png')"
+      >
+        <div class="image-text">Naveen Kukreja</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-founder of Paisabazaar (Alumnus-1999, Electrical Engineering)
+        </div>
+        <div class="info">
+          Naveen is one of the most prominent faces of India's fast-evolving
+          fintech industry. Along with being the co-founder of Paisabazaar–
+          India's largest marketplace platform for consumer credit – Naveen is
+          also a Board Member of FACE (Fin-Tech Association for Consumer
+          Empowerment) and a member of the Governing Council of IAMAI. Naveen
+          has over 2 decades of deep experience in the financial services
+          markets of India and Europe. He has worked with Citibank in India,
+          Capital One Bank in the UK and as the Senior Vice President of
+          Marketing and Strategy at Aviva Life Insurance, where he set up and
+          led the digital business and made it the market leader.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Founder and CEO of Freshmenu (Alumnus- 2001, Electrical Engineering)
+        </div>
+        <div class="info">
+          Rashmi Daga, founder and CEO of Freshmenu, has achieved recognition as
+          a successful food tech entrepreneur, including being named
+          "Entrepreneur of the Year" at the ETPrime Women Leadership Awards
+          (ETPWLA) 2019 and winning the ET-Facebook Woman Ahead award in 2018.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 6.png')"
+      >
+        <div class="image-text">Rashmi Daga</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 7.png')"
+      >
+        <div class="image-text">Kumar Anubhav</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-Founder of NotOnMap (Alumnus- 2005, electronics and communication)
+        </div>
+        <div class="info">
+          Rich data analytics experience accompanied with wide global travel
+          experience led Kumar Anubhav to do an intensive gap analysis at
+          grassroot level in the domestic market which finally led to the
+          inception of Concept 'NotOnMap'. To make this concept a reality, Kumar
+          quit his job & turned into a 'Travel Ecopreneur" focussed towards
+          creating Impact through travel at a scale. In a short span of time,
+          NotOnMap got recognition as World's Top 3 "Social Innovative Start-up"
+          in a competition held at Amsterdam in May2019.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-founder and CEO of HealthifyMe (Alumnus- 2004, Computer science
+          engineering)
+        </div>
+        <div class="info">
+          Tushar Vashisht is the co-founder and CEO of consumer health app
+          HealthifyMe. While at HealthifyMe and during their poverty line
+          experiment, Vashisht advocated for better nutrition policies for
+          Indians. He advocated for better protein subsidy for the masses in
+          2011–12 in front of the Planning Commission and National Advisory
+          Council, as well as on other forums. In 2018, he gave a presentation
+          during the India-Russia Business Summit, in front of Indian Prime
+          Minister, Narendra Modi, and Russian President Vladimir Putin.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 8.png')"
+      >
+        <div class="image-text">Tushar Vashisht</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 9.png')"
+      >
+        <div class="image-text">Saurabh Nigam</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-Founder & COO of ElasticRun (Alumnus- 2000, Civil engineering)
+        </div>
+        <div class="info">
+          Saurabh Nigam is the Co-Founder & Chief Operating Officer of
+          ElasticRun. & before joining this company He has worked with companies
+          like Omidyar Network India, Dasra, Snapdeal, Beroe Inc, Capgemini &
+          others. He holds an MBA degree from the XLRI Jamshedpur.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-Founder of GoMechanic (Alumnus- 2010, Civil Engineering)
+        </div>
+        <div class="info">
+          Amit Bhasin has more than 3 years of experience in Management
+          consulting working with clients across Real Estate, Retail,
+          Manufacturing and Insurance sectors implement their strategies through
+          people interventions. At GoMechanic, they are trying to create a
+          consistent, reliable and hassle-free car care solution for customers.
+          Transparent pricing, reliable service and convenience for a seamless
+          customer experience are the principles they live by.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 10.png')"
+      >
+        <div class="image-text">Amit Bhasin</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 11.png')"
+      >
+        <div class="image-text">Rajat Garg</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Founder and CEO of myUpchar (Alumnus- 2002, Computer engineering)
+        </div>
+        <div class="info">
+          Rajat Garg, the founder and CEO of myUpchar, has achieved notable
+          success in the healthcare technology space, including building a
+          platform that reached 1 million visitors within 3 months of launch
+          without marketing, and is known for his work in digital health and
+          healthcare awareness. Before myUpchar, he was the founder of Simply.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Founder of LockDeal (Alumnus- 2004, electronics and communication)
+        </div>
+        <div class="info">
+          Gaurav Singh is DCE/Georgia Tech entrepreneur with 2 successful
+          start-up exits in B2B eCommerce and software domain. Currently, he is
+          helping enterprises digitize & automate their wholesale distribution.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 12.png')"
+      >
+        <div class="image-text">Gaurav Singh</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 13.png')"
+      >
+        <div class="image-text">Sandeep Dalmia</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-founder of StanzaLiving (Alumnus- 2008, Computer engineering)
+        </div>
+        <div class="info">
+          An IIM-A and DCE graduate, Sandeep's professional stints have spanned
+          India, SE Asia and the US. At BCG, he was nominated as one of their 60
+          Global Ambassadors. And now, he's the co-founder of one of India's
+          hottest start-ups. A cycling enthusiast and a cocktail connoisseur, we
+          suspect the only thing Sandeep doesn't have time for is sleep.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Founder of Weaddo (Alumnus- 2005, Mechanical Engineering)
+        </div>
+        <div class="info">
+          First generation entrepreneur, Founder of Weaddo in 2018 with the
+          purpose of innovating in the field of CX, Analytics and Practical AI.
+          Been awarded in the various fields of technology, digital and CX.
+          Certified across Machine Learning, Analytics, Design Thinking and
+          Gamification. He has also spoken regularly on various platforms such
+          as CII, IAMAI, Bangaldesh Brand Forum etc. He has occasionally given
+          guest lectures in MBA institutes on specialized topics.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 14.png')"
+      >
+        <div class="image-text">Protik Basu</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 15.png')"
+      >
+        <div class="image-text">Saurav Kumar</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Founder and CEO of Euler Motors (Alumnus- 2009, Computer science
+          engineering)
+        </div>
+        <div class="info">
+          Mr. Kumar is the founder and CEO of Euler Motors, an automotive tech
+          startup based out of New Delhi focused on commercial electric
+          vehicles. Euler Motors recently raised a 20-crore Series A funding.
+          Prior to this, he was co-founder and CEO of another company, Cube26,
+          an India based technology innovation firm focused on revolutionizing
+          the user experience across multiple devices and platforms. Cube26 was
+          acquired by PayTM.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-Founder of NAT HABIT and ZipGo (Alumnus- 2000, Bachelor of
+          Engineering)
+        </div>
+        <div class="info">
+          Gaurav Agarwal began his entrepreneurial journey with ZipGo, a
+          ride-hailing startup that competed with industry giants like Ola and
+          Uber. After an exciting journey with ZipGo, which eventually led to
+          its acquisition, Gaurav hopped on his next big adventure in the D2C
+          space- Nat Habit. With Nat Habit, he and Swagatika are building a
+          brand dedicated to providing fresh and natural skincare products to
+          Indians.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 16.png')"
+      >
+        <div class="image-text">Gaurav Agarwal</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 17.png')"
+      >
+        <div class="image-text">Gaurav Garg</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Founder and CEO at BoboGear (Alumnus- 2007, electrical engineering)
+        </div>
+        <div class="info">
+          Experienced CEO at Bobogears with a demonstrated history of working in
+          the retail, healthcare and education sectors. Skilled in Product
+          Management, Analytical Skills, Business Management, Digital Marketing
+          and almost all aspects of making a business successful from ground up.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-founder of Moms Home (Alumnus- 2008, Computer engineering)
+        </div>
+        <div class="info">
+          Kumar Vaibhav, a co-founder of Moms Home, an organic baby clothing and
+          essentials brand, is also an IIM Indore alumnus, and has experience in
+          market research and business strategy, as well as experience in
+          digital sales strategies and brand partnership. He is also a
+          co-founder of Footprints Organic Bamboo Socks.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 18.png')"
+      >
+        <div class="image-text">Kumar Vaibhav</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 19.png')"
+      >
+        <div class="image-text">Ritesh Ujjawal</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-founder of Kofluence (Alumnus- 2006, electronics and communication)
+        </div>
+        <div class="info">
+          Building a democratic creator ecosystem with codeless AI-powered
+          Influencer Marketing. With a career spanning banking, consulting,
+          gaming, and start-ups for over 1.5 decades, currently as a Co-founder
+          Ritesh Ujjwal lead Kofluence – a disruptive Ad-Tech influencer
+          platform that empowers brands and social media users to harness social
+          influence.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-Founder of ZFunds (Alumnus- 2014, Electrical and Electronics
+          Engineering)
+        </div>
+        <div class="info">
+          Founded in 2019 by Manish Kothari and Vidhi Tuteja, ZFunds is on a
+          mission to make mutual funds simple, accessible, and effective for
+          every Indian. This investment marks a significant milestone in the
+          company's journey to empower financial distributors and transform
+          wealth management for millions of households across the country.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 20.png')"
+      >
+        <div class="image-text">Vidhi Tuteja</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 21.png')"
+      >
+        <div class="image-text">Shivam Satrawal</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-Founder & VP, UnifyApps (Alumnus- 2014, Computer Science
+          Engineering)
+        </div>
+        <div class="info">
+          UnifyApps - a Unified Enterprise AI Agent Orchestration Platform,
+          co-founded by DTU alumnus Shivam Satrawal (B.Tech 2014, CSE), has
+          recently raised $20 Mn (INR 168.7 Cr) in a Series A round led by
+          ICONIQ Growth and Elevation Capital. The funds will help expand its
+          enterprise AI agent platform and deepen SaaS integrations.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Founder and CEO of RentOk (Alumnus- 2018, Electrical Engineering)
+        </div>
+        <div class="info">
+          Srijan Raj, the founder and CEO of RentOk, has made significant
+          achievements in the property renting space, including founding RentOk
+          to make renting a more positive experience and winning a Startupthon
+          in the student category.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 22.png')"
+      >
+        <div class="image-text">Srijan Raj</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 23.png')"
+      >
+        <div class="image-text">Summit Nayak</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-Founder of Ekank Technologies (Alumnus- 2014, Mechanical
+          Engineering)
+        </div>
+        <div class="info">
+          Summit Nayak is the Co-Founder of Ekank Technologies and is
+          responsible for overseeing the business and partnerships at Ekank
+          Technologies, India's pioneer platform that enables storytelling on
+          history, art, culture, and heritage, in regional languages.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-founder of Broomees (Alumnus- 2018, Mechanical and Automotive
+          Engineering)
+        </div>
+        <div class="info">
+          Saurav Kumar is the co-founder of Broomees, a platform that offers
+          domestic help services in India, aims to revolutionise the domestic
+          help industry by providing reliable and professional services to every
+          household. The platform connects customers with trained and verified
+          domestic helpers who offer a variety of services, including cleaning,
+          cooking, and baby care. Broomees has already generated over 7,500 jobs
+          for domestic helpers.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 24.png')"
+      >
+        <div class="image-text">Saurav Kumar</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 25.png')"
+      >
+        <div class="image-text">Anuj Bihani</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Founder of Impaqt Robotics Private Limited (Alumnus- 1981, Mechanical
+          Engineering)
+        </div>
+        <div class="info">
+          Anuj Bihani is the Founder of Impaqt Robotics Private Limited, where
+          Anuj is accelerating the deployment of robots globally. As the
+          Managing Director of Alstrut India Private Limited, Anuj leads the
+          leading 'Collaborative Robot' company in India. Anuj is also an Angel
+          Investor at The Chennai Angels and a Partner at Toshni-Tek
+          International, focusing on engineering products, solutions, and
+          services. Anuj is the Immediate Past President and Founder President
+          of the Seed Transformation Network, South Asia.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-founder and CEO/CFO of Drivetrain (Alumnus- 1999, Electrical
+          Engineering)
+        </div>
+        <div class="info">
+          Alok Goel is a seasoned technology executive with extensive experience
+          in product management, operations, and entrepreneurship. As the
+          Co-founder and CEO/CFO of Drivetrain, he leverages his deep industry
+          expertise to drive innovation and growth in the technology sector.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 26.png')"
+      >
+        <div class="image-text">Alok Goel</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 27.png')"
+      >
+        <div class="image-text">Vikrant Agarwal</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-founder of Care.Fi (Alumnus- 2008, Electronics and Communication
+          Engineering)
+        </div>
+        <div class="info">
+          Vikrant Agarwal is the co-founder of Care.Fi, an embedded HealthFin
+          ecosystem for hospital, doctors, suppliers and patients. Started in
+          Jan 2022 and it has been an excellent journey, wherein, they have
+          impacted more than 80,000+ lives with more than 500cr of disbursals in
+          less than two years of operations. They have acquired NBFC license in
+          less than two years of operations and are on track to create the first
+          HealthFin OS for all the providers.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Founder and CEO of Walnut Health (Alumnus, Computer Science
+          Engineering)
+        </div>
+        <div class="info">
+          Mannat S. is the founder and CEO of Walnut Health. Imagine socialising
+          health while building a lifestyle that pays off your insurance. It's a
+          data centric app, to build daily healthy habits; & with integrations
+          to every premium service you would ever require .
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 28.png')"
+      >
+        <div class="image-text">Mannat S.</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 29.png')"
+      >
+        <div class="image-text">Deepak Bhatia</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-founder at Houseeazy (Alumnus-2008, Civil Engineering)
+        </div>
+        <div class="info">
+          Deepak Bhatia is the co-founder at Houseeazy. He is a Experienced
+          Management Professional with a demonstrated history of Successful
+          Turnarounds across various functions in Real Estate - Sales &
+          Marketing, Product & Business Strategy. In a short span of time,
+          HouseEazy has concluded transactions worth Rs. 1,000 Cr, serving more
+          than 1,200 happy families and hosting over 10,000 customer visits.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Founder of CodeJudge and IndiaSupply (Alumnus-2016, Computer Science
+          Engineering)
+        </div>
+        <div class="info">
+          Krutika Rastogi has been a founder (CodeJudge and IndiaSupply) and a
+          series A startup operator (Elucidata). She is building Brightlife, its
+          mission is to become India's most useful emotional wellness platform
+          for your real-life challenges - be it parenting, relationships,
+          resolving conflicts, stress management or more! They are also bringing
+          the massive emotional wellness industry online to the digital economy.
+        </div>
+      </div>
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 30.png')"
+      >
+        <div class="image-text">Krutika Rastogi</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 31.png')"
+      >
+        <div class="image-text">Nilesh Agarwal</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-Founder & CTO of Inferless and Peakperformer (Alumnus-2014,
+          Computer Science Engineering)
+        </div>
+        <div class="info">
+          Nilesh Agarwal is building Inferless (backed by Sequoia). He also
+          Built Codejudge (Acquired by Skuad) and is an ex employee of amazon.
+          Inferless is Serverless GPU Inference to scale your machine learning
+          inference without any hassle of managing servers, and deploy
+          complicated and custom models with ease. Backed by Sequoia, Antler &
+          Blume Ventures.
+        </div>
+      </div>
+    </div>
+    <div class="class1">
+      <div id="text">
+        <div class="heading">
+          Co-founder and CTO of Figr (Alumnus-2021, Computer Science
+          Engineering)
+        </div>
+        <div class="info">
+          Chirag Singhla is the co-founder and CTO of Figr, a startup that he
+          launched in June 2023, aiming to simplify UI UX designing. Before
+          that, he worked as a machine learning engineer at Myntra, where he
+          implemented solutions such as shoppable looks, vertical widgets
+          reordering, and beauty product care personalization. He also worked as
+          a data scientist at Rakuten, where he developed an automated report
+          key features extraction tool using a pre-trained Transformer model
+          (BERT) with 93% accuracy. Additionally, he filed a patent with Adobe
+          for a novel approach to sequential pattern mining to extract
+          high-utility patterns.
+        </div>
+      </div>
+
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 32.png')"
+      >
+        <div class="image-text">Chirag Singla</div>
+      </div>
+    </div>
+    <div class="class2">
+      <div
+        class="image-container"
+        style="background-image: url('images/image copy 33.png')"
+      >
+        <div class="image-text">Karan Bhutani</div>
+      </div>
+      <div id="text">
+        <div class="heading">
+          Co-founder of Two Point O Capital (Alumnus, Bachelor of Engineering)
+        </div>
+        <div class="info">
+          Karan Bhutani, co-founder of Two Point O Capital, has achieved notable
+          success in the climate financing sector. Under his leadership, Two
+          Point O Capital secured $6.3 million in seed funding from investors
+          including Omnivore, Multiply Ventures, RTP Global, Spectrum Impact,
+          and growX ventures. This funding aims to enhance their tech-enabled
+          platform for financing distributed clean energy projects such as solar
+          rooftops, energy efficiency equipment, and wastewater treatment.
+          Earlier in his career, Karan was recognized as the Second Runner Up at
+          the INSEAD Entrepreneurship Bootcamp in April 2012 and participated in
+          the ASES Stanford Summit in 2007.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

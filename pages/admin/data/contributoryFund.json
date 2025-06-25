@@ -1,0 +1,133 @@
+[
+    {
+        "serial": 1,
+        "name": "Dr. Raj Soin",
+        "amount": "₹ 5,00,00,000",
+        "purpose": "For the establishment of Raj Soin Hall",
+        "date": "23.10.2018",
+        "image": "/pages/public/img/alumni and donor photos/Dr. Raj Soin.jpg"
+    },
+    {
+        "serial": 2,
+        "name": "Prof. D. Yogi Goswami and Mrs. Karuna Goswami",
+        "amount": "$ 100,000",
+        "purpose": "Establishment of Energy & Environment Centre at DTU",
+        "date": "04.03.2019",
+        "image": "/pages/public/img/alumni and donor photos/Prof. D. Yogi Goswami and Mrs. Karuna Goswami.jpg"
+    },
+    {
+        "serial": 3,
+        "name": "Vinod Dham",
+        "amount": "$ 1,25,000",
+        "purpose": "For Vinod Dham Center of Excellence for Semiconductor Research",
+        "date": "22.02.2023",
+        "image": "/pages/public/img/alumni and donor photos/Vinod Dham.jpg"
+    },
+    {
+        "serial": 4,
+        "name": "Vijay Shekhar Sharma",
+        "amount": "₹ 2,00,00,000",
+        "purpose": "For Lab on Wheels",
+        "date": "22.02.2023",
+        "image": "/pages/public/img/alumni and donor photos/Vijay Shekhar Sharma.jpg"
+    },
+
+    {
+        "serial": 5,
+        "name": "Dr. Durga Das Agrawal",
+        "amount": "$ 5,000",
+        "purpose": "Grant for charitable, religious, scientific, literary or educational purposes and to support a scholarship for the students on the basis of merit-cum-means to any student of the university.",
+        "date": "27.08.2018",
+        "image": "/pages/public/img/alumni and donor photos/Dr. Durga Das Agrawal.jpg"
+    },
+    {
+        "serial": 6,
+        "name": "Sh. Ashok Kumar Puri",
+        "amount": "₹ 2,00,000",
+        "purpose": "",
+        "date": "15.01.2019",
+        "image": "/pages/public/img/alumni and donor photos/Sh. Ashok Kumar Puri.jpg"
+    },
+    {
+        "serial": 7,
+        "name": "Prof. N. K. Jain",
+        "amount": "Rs. 1,88,000",
+        "purpose": "",
+        "date": "22.12.2016",
+        "image": "/pages/public/img/alumni and donor photos/Prof. N. K. Jain.jpg"
+    },
+    {
+        "serial": 8,
+        "name": "Prof. A. K. Tandon",
+        "amount": "₹ 1,00,000",
+        "purpose": "",
+        "date": "23.03.2017",
+        "image": "/pages/public/img/alumni and donor photos/Prof. A. K. Tandon.jpg"
+    },
+    {
+        "serial": 9,
+        "name": "Mrs. Rani Maheshwari",
+        "amount": "₹ 1,00,000",
+        "purpose": "",
+        "date": "17.04.2017",
+        "image": "/pages/public/img/alumni and donor photos/Mrs. Rani Maheshwari.jpg"
+    },
+    {
+        "serial": 10,
+        "name": "Sh. Shivdass Agrawal",
+        "amount": "₹ 1,00,000",
+        "purpose": "",
+        "date": "01.12.2017",
+        "image": "/pages/public/img/alumni and donor photos/Sh. Shivdass Agrawal.jpg"
+    },
+    {
+        "serial": 11,
+        "name": "Moti Lal Gehani",
+        "amount": "₹ 1,00,000",
+        "purpose": "",
+        "date": "07.01.2019",
+        "image": "/pages/public/img/alumni and donor photos/Moti Lal Gehani.jpg"
+    },
+    {
+        "serial": 12,
+        "name": "Shashi Kishore Jain",
+        "amount": "₹ 1,00,000",
+        "purpose": "",
+        "date": "25.10.2022",
+        "image": "/pages/public/img/alumni and donor photos/Shashi Kishore Jain.jpg"
+    },
+    {
+        "serial": 13,
+        "name": "Sat Prakash Goel",
+        "amount": "₹ 3,00,000",
+        "purpose": "",
+        "date": "14.11.2022",
+        "image": "/pages/public/img/alumni and donor photos/Sat Prakash Goel.jpg"
+    },
+    {
+        "serial": 14,
+        "name": "Indo Count Foundation through Sh. D.P Garg",
+        "amount": "₹ 5,00,000",
+        "purpose": "",
+        "date": "30.01.2019",
+        "image": "/pages/public/img/alumni and donor photos/Indo Count Foundation through Sh. D.P Garg.jpg"
+    },
+        
+    {
+        "serial": 15,
+        "name": "Prof. R. C. Sharma",
+        "amount": "₹ 5,00,000",
+        "purpose": "",
+        "date": "02.11.2016",
+        "image": "/pages/public/img/alumni and donor photos/Prof. R. C. Sharma.jpg"
+    },
+    
+        {
+        "serial": 16,
+        "name": "Jai Gopal Gupta",
+        "amount": "₹ 1,00,000",
+        "purpose": "",
+        "date": "08.02.2019",
+        "image": "/pages/public/img/alumni and donor photos/jai gopal gupta.jpg"
+        }
+      ]
